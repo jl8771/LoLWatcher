@@ -4,11 +4,11 @@ A demo notebook for predicting the winning team of a game of professional League
 
 ___
 
-[![](https://img.shields.io/static/v1?label=Build&message=alpha&color=red)](#)
-[![](https://img.shields.io/static/v1?label=Status&message=ok&color=brightgreen)](#)
-[![](https://img.shields.io/static/v1?label=Python&message=3.10&color=yellow)](#)
-[![](https://img.shields.io/static/v1?label=Platform&message=linux|macOS|Windows&color=lightgrey)](#)
-[![](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](#)
+[![](https://img.shields.io/static/v1?label=Build&message=alpha&color=red "Build")](#)
+[![](https://img.shields.io/static/v1?label=Status&message=ok&color=brightgreen "Status")](#)
+[![](https://img.shields.io/static/v1?label=Python&message=3.10&color=yellow "Python")](#)
+[![](https://img.shields.io/static/v1?label=Platform&message=linux|macOS|Windows&color=lightgrey "Platform")](#)
+[![](https://img.shields.io/static/v1?label=License&message=MIT&color=blue "License")](#)
 ___
 
 ### Table of Contents
@@ -47,9 +47,27 @@ ___
 
 Run the `LoLWatcher.ipynb` locally while watching LCS!
 
+Or run a demo in Colab with presaved-screenshots from the LCS Summer Playoffs 2022 TL vs FQ upper bracket quarterfinal game 2!
+[![](https://img.shields.io/static/v1?label=%7F&message=Open%20in%20Colab&color=blue&logoColor=&logo=googlecolab "Open in Colab")](#)
+
 ### Model
 ___
 
-The LoLWatcher V2 model is trained on over 7000 matches of Korean SoloQueue games at the Master, Grandmaster and Challenger level obtained from a list of 120+ LCK, LPL and LCS pros.
+The LoLWatcher V2 model is trained on over 6800 matches of Korean SoloQueue games at the Master, Grandmaster and Challenger level obtained from a list of 120+ LCK, LPL and LCS pros.
 
 Although using the Riot Games match v5 API provides over 100 different metrics per player for over 1000 metrics per game, the LoLWatcher V2 model only uses 63 metrics which can be consistently read by Tesseract OCR during the live LCS broadcast. These include team objectives including total team kills, towers taken, first tower bonus, barons taken, dragons taken and individual stats for each player including minions killed, kills, deaths, and assists.
+
+On the train test split using a test size of 30% and a random state of 5, the model achieved 0.99 precision, 0.98, recall, and 0.98 f1 score with a support of 1077 on the negative class, and 0.98 precision, 0.99 recall, and 0.98 f1 score with a support of 988 on the positive class. This was obtained from the sci-kit learn classification report. The positive class represents a case where the blue side team won the game, and the negative class represents a case where the blue side team lost the game.
+
+The confusion matrix can be found below.
+
+|                 | Predicted Negative | Predicted Positive |
+| :---            | :----:             | :---:              |
+| Actual Negative | 1056 TN            | 21 FP              |
+| Actual Positive | 12 FN              | 976 TP             |
+
+Precision: 0.9789
+Recall: 0.9879
+F1 Score: 0.9833
+Accuracy: 0.98
+Test Samples: 2065
