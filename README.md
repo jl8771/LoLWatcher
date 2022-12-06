@@ -2,7 +2,18 @@
 
 A demo notebook for predicting the winning team of a game of professional League of Legends, specifically LCS games.
 
-### Install Instructions
+___
+
+
+___
+
+### Table of Contents
+
+1. [Install](#install)
+1. [Usage](#usage)
+
+### Install
+___
 
 It is recommended to create a new python virtual environment and install the project dependencies with pip.
 
@@ -25,3 +36,8 @@ Install dependencies with pip:
 Finally, this notebook depends on [Tesseract](https://github.com/tesseract-ocr/tesseract).
 
 Installation instructions can be found [here](https://tesseract-ocr.github.io/tessdoc/Installation.html).
+
+### Usage
+___
+
+Run the `LoLWatcher.ipynb` locally or in Colab.
