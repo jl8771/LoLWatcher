@@ -4,13 +4,18 @@ A demo notebook for predicting the winning team of a game of professional League
 
 ___
 
-
+[![](https://img.shields.io/static/v1?label=Build&message=alpha&color=red)](#)
+[![](https://img.shields.io/static/v1?label=Status&message=ok&color=brightgreen)](#)
+[![](https://img.shields.io/static/v1?label=Python&message=3.10&color=yellow)](#)
+[![](https://img.shields.io/static/v1?label=Platform&message=linux|macOS|Windows&color=lightgrey)](#)
+[![](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](#)
 ___
 
 ### Table of Contents
 
 1. [Install](#install)
 1. [Usage](#usage)
+1. [Model](#model)
 
 ### Install
 ___
@@ -40,4 +45,11 @@ Installation instructions can be found [here](https://tesseract-ocr.github.io/te
 ### Usage
 ___
 
-Run the `LoLWatcher.ipynb` locally or in Colab.
+Run the `LoLWatcher.ipynb` locally while watching LCS!
+
+### Model
+___
+
+The LoLWatcher V2 model is trained on over 7000 matches of Korean SoloQueue games at the Master, Grandmaster and Challenger level obtained from a list of 120+ LCK, LPL and LCS pros.
+
+Although using the Riot Games match v5 API provides over 100 different metrics per player for over 1000 metrics per game, the LoLWatcher V2 model only uses 63 metrics which can be consistently read by Tesseract OCR during the live LCS broadcast. These include team objectives including total team kills, towers taken, first tower bonus, barons taken, dragons taken and individual stats for each player including minions killed, kills, deaths, and assists.
