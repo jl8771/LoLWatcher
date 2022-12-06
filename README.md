@@ -48,6 +48,7 @@ ___
 Run the `LoLWatcher.ipynb` locally while watching LCS!
 
 Or run a demo in Colab with presaved-screenshots from the LCS Summer Playoffs 2022 TL vs FQ upper bracket quarterfinal game 2!
+
 [![](https://img.shields.io/static/v1?label=%7F&message=Open%20in%20Colab&color=blue&logoColor=&logo=googlecolab "Open in Colab")](https://colab.research.google.com/drive/1Gm8JKo5FLo-06LFdQIKSaHX-jZQtoaGH?usp=sharing)
 
 ### Model
@@ -66,8 +67,8 @@ The confusion matrix can be found below.
 | Actual Negative | 1056 TN            | 21 FP              |
 | Actual Positive | 12 FN              | 976 TP             |
 
-Precision: 0.9789
-Recall: 0.9879
-F1 Score: 0.9833
-Accuracy: 0.98
-Test Samples: 2065
+* Precision: 0.9789
+* Recall: 0.9879
+* F1 Score: 0.9833
+* Accuracy: 0.98
+* Test Samples: 2065
