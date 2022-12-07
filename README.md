@@ -32,7 +32,7 @@ Activate the virtual environment:
 
 or
 
-`...\env\bin\Scripts\Activate`
+`...\env\bin\Scripts\activate`
 
 Install dependencies with pip:
 
